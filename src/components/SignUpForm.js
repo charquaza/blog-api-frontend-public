@@ -46,8 +46,6 @@ function SignUpForm(props) {
                     localStorage.setItem('user', JSON.stringify(data.user));
                     localStorage.setItem('token', data.token);
 
-                    console.log('Sign up successful');
-
                     //re-render app
                     props.setCurrUser(data.user);
                 }

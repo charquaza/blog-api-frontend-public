@@ -53,7 +53,6 @@ function PostDetail(props) {
 
         var commentsURL = props.apiURL + '/posts/' + urlParams.id + '/comments';
 
-        //send token too
         fetch(commentsURL, { method: 'GET', mode: 'cors' })
             .then((res) => {
                 if (res.ok) {
@@ -110,8 +109,6 @@ function PostDetail(props) {
                                 setDataNeedsUpdate={setDataNeedsUpdate}
                             />
                         }
-
-                        {/* edit comment form */}
                     </>
                 : <p>Loading post...</p>
             }
