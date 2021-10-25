@@ -5,6 +5,7 @@ import Home from './components/Home';
 import PostDetail from './components/PostDetail';
 import Authentication from './components/Authentication';
 import NotFound from './components/NotFound';
+import { apiURL } from './config.js';
 import './App.css';
 
 function App() {
@@ -14,8 +15,6 @@ function App() {
       : null
   );
   const [postList, setPostList] = useState([]);
-
-  const apiURL = 'http://localhost:3000';
 
   useEffect(function getAllPosts() {
     fetch(apiURL + '/posts', { method: 'GET', mode: 'cors' })
